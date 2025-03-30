@@ -1,8 +1,4 @@
 #include <iostream>
-#include <vector>
-#include <string>
-#include <algorithm>
-#include <queue>
 
 using namespace std;
 
@@ -13,7 +9,10 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int M, N;
-    cin>>M;
-    cout<<M+1;
+    int V, E;
+    cin>>V>>E;
+    for(int i=0; i<E; i++){
+        int A, B, C;
+        cin>>A>>B>>C;
+    }
 }
