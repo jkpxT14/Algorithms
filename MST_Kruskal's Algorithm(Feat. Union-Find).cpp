@@ -19,7 +19,7 @@ int find(int v)
     if(v==parent[v]){
         return v;
     }
-    return parent[v]=find(parent[v])
+    return parent[v]=find(parent[v]);
 }
 
 int union_(int u, int v)
