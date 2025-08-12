@@ -20,6 +20,7 @@ using qi=queue<int>;
 using dqi=deque<int>;
 using dqll=deque<long long>;
 using pii=pair<int, int>;
+using vvi=vector<vector<int>>;
 using vpii=vector<pair<int, int>>;
 using vpipii=vector<pair<int, pair<int, int>>>;
 using dqpii=deque<pair<int, int>>;
@@ -32,6 +33,8 @@ using vvpii=vector<vector<pair<int, int>>>;
 
 // ans = answer
 // cur = current
+
+// const int INF=INT_MAX/4;
 
 int main()
 {
