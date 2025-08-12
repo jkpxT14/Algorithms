@@ -18,6 +18,7 @@ using vb=vector<bool>;
 using si=stack<int>;
 using qi=queue<int>;
 using dqi=deque<int>;
+using dqll=deque<long long>;
 using pii=pair<int, int>;
 using vpii=vector<pair<int, int>>;
 using vpipii=vector<pair<int, pair<int, int>>>;
@@ -28,10 +29,11 @@ using vvpii=vector<vector<pair<int, int>>>;
 #define INT_MIN -2147483648
 #define LLONG_MAX 9223372036854775807
 #define LLONG_MIN -9223372036854775808
-const int INF=INT_MAX;
 
 // ans = answer
 // cur = current
+
+const ll INF=LLONG_MAX;
 
 int main()
 {
@@ -42,7 +44,7 @@ int main()
     int N, M;
     cin>>N>>M;
     
-    vi dist(N+1, INF);
+    vll dist(N+1, INF);
     vpipii edge(M);
 
     for(int i=0; i<M; i++){
@@ -55,12 +57,12 @@ int main()
     for(int i=1; i<=N; i++){
         for(auto &cur_edge: edge){
             if(dist[cur_edge.second.first]!=INF){
-                if(dist[cur_edge.second.second]>dist[cur_edge.second.first]+cur_edge.first){
+                if(dist[cur_edge.second.second]>dist[cur_edge.second.first]+(ll)cur_edge.first){
                     if(i==N){
                         cout<<"-1";
                         return 0;
                     }
-                    dist[cur_edge.second.second]=dist[cur_edge.second.first]+cur_edge.first;
+                    dist[cur_edge.second.second]=dist[cur_edge.second.first]+(ll)cur_edge.first;
                 }
             }
         }
