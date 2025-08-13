@@ -8,12 +8,14 @@
 #include <utility>
 #include <tuple>
 // #include <limits>
+#include <cmath>
 
 using namespace std;
 
 using ll=long long;
 using vi=vector<int>;
 using vll=vector<long long>;
+using vd=vector<double>;
 using vb=vector<bool>;
 using sti=stack<int>;
 using qi=queue<int>;
@@ -37,15 +39,18 @@ using vvpii=vector<vector<pair<int, int>>>;
 // deque = dq
 // ans = answer
 // cur = current
+// coordinate = coord
 // adjacency matrix = adj_mat
 
-const int INF=INT_MAX/4; // INF = INFinity
+// const int INF=INT_MAX/4; // INF = INFinity
 
-int main()
-{
+int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     // cout.tie(nullptr);
+    
+    cout<<fixed;
+    cout.precision(10);
 
     return 0;
 }
