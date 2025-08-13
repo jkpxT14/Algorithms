@@ -15,7 +15,7 @@ using ll=long long;
 using vi=vector<int>;
 using vll=vector<long long>;
 using vb=vector<bool>;
-using si=stack<int>;
+using sti=stack<int>;
 using qi=queue<int>;
 using dqi=deque<int>;
 using dqll=deque<long long>;
@@ -31,10 +31,15 @@ using vvpii=vector<vector<pair<int, int>>>;
 #define LLONG_MAX 9223372036854775807
 #define LLONG_MIN -9223372036854775808
 
+// vector = vec = v
+// stack = sta = st
+// queue = que = q
+// deque = dq
 // ans = answer
 // cur = current
+// adjacency matrix = adj_mat
 
-// const int INF=INT_MAX/4;
+const int INF=INT_MAX/4; // INF = INFinity
 
 int main()
 {
