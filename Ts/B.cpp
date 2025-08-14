@@ -5,6 +5,7 @@
 #include <queue>
 #include <deque>
 #include <algorithm>
+#include <numeric>
 #include <utility>
 #include <tuple>
 // #include <limits>
@@ -47,7 +48,7 @@ using vvpii=vector<vector<pair<int, int>>>;
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-    // cout.tie(nullptr);
+    cout.tie(nullptr);
     
     cout<<fixed;
     cout.precision(10);
