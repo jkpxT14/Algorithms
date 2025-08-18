@@ -75,8 +75,8 @@ int main(){
     cout<<fixed;
     cout.precision(10);
 
-    journey Minho, Gangho;
-    cin>>Minho.from.x>>Minho.from.y>>Minho.to.x>>Minho.to.y>>Gangho.from.x>>Gangho.from.y>>Gangho.to.x>>Gangho.to.y;
+    journey Jake, Benji;
+    cin>>Jake.from.x>>Jake.from.y>>Jake.to.x>>Jake.to.y>>Benji.from.x>>Benji.from.y>>Benji.to.x>>Benji.to.y;
 
     vd dist(4);
     vd t={0, -1, -1, 1};
@@ -84,8 +84,8 @@ int main(){
     for(int i=0; i<1e5; i++){
         t[1]=(t[0]*2+t[3])/3;
         t[2]=(t[0]+t[3]*2)/3;
-        dist[1]=get_distance(Minho.get_cur_coord(t[1]), Gangho.get_cur_coord(t[1]));
-        dist[2]=get_distance(Minho.get_cur_coord(t[2]), Gangho.get_cur_coord(t[2]));
+        dist[1]=get_distance(Jake.get_cur_coord(t[1]), Benji.get_cur_coord(t[1]));
+        dist[2]=get_distance(Jake.get_cur_coord(t[2]), Benji.get_cur_coord(t[2]));
         if(dist[1]==0 || dist[2]==0){
             cout<<"0";
             return 0;
@@ -97,7 +97,7 @@ int main(){
             t[3]=t[2];
         }
     }
-    cout<<get_distance(Minho.get_cur_coord((t[0]+t[3])/2), Gangho.get_cur_coord((t[0]+t[3])/2));
+    cout<<get_distance(Jake.get_cur_coord((t[0]+t[3])/2), Benji.get_cur_coord((t[0]+t[3])/2));
 
     return 0;
 }
