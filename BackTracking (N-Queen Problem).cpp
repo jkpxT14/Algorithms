@@ -53,12 +53,14 @@ using vvpii=vector<vector<pair<int, int>>>;
 
 int N, cnt=0;
 vi board;
+vb column_check, positive_diagonal_check, negative_diagonal_check;
 
 bool promising(int cur){
-    for(int i=1; i<=cur; i++){
-        if(board[cur]==board[i] || cur-i==abs(board[cur]-board[i])) return false;
-        else return true;
-    }
+    // for(int i=1; i<cur; i++){
+    //     if(board[cur]==board[i] || cur-i==abs(board[cur]-board[i])) return false;
+    // }
+    if(column_check[board[cur]] || positive_diagonal_check[board[cur]-cur+N] || negative_diagonal_check[board[cur]+cur-1]) return false;
+    else return true;
 }
 
 void N_Queen(int cur){
@@ -69,7 +71,13 @@ void N_Queen(int cur){
     for(int i=1; i<=N; i++){
         board[cur]=i;
         if(promising(cur)){
+            column_check[board[cur]]=true;
+            positive_diagonal_check[board[cur]-cur+N]=true;
+            negative_diagonal_check[board[cur]+cur-1]=true;
             N_Queen(cur+1);
+            column_check[board[cur]]=false;
+            positive_diagonal_check[board[cur]-cur+N]=false;
+            negative_diagonal_check[board[cur]+cur-1]=false;
         }
     }
 }
@@ -83,7 +91,10 @@ int main(){
     cout.precision(10);
 
     cin>>N;
-    board.resize(N+1);
+    board.resize(N+1, 0);
+    column_check.resize(N+1, false);
+    positive_diagonal_check.resize(2*N, false);
+    negative_diagonal_check.resize(2*N, false);
 
     N_Queen(1);
     cout<<cnt;
