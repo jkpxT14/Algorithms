@@ -1,4 +1,4 @@
-//
+// BOJ 17611: 직각다각형
 
 // #include <bits/stdc++.h>
 #include <iostream>
