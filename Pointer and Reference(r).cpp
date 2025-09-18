@@ -1,5 +1,3 @@
-// Baekjoon Online Judge Prob. 1197
-
 #include <iostream>
 #include <vector>
 #include <string>

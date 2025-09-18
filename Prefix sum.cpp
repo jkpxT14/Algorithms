@@ -1,9 +1,17 @@
+//
+
+// #include <bits/stdc++.h>
 #include <iostream>
 #include <string>
+
 #include <vector>
 #include <stack>
 #include <queue>
-#include <deque>
+#include <deque> // DEQUE = Double-Ended QUEue
+#include <list>
+#include <set>
+#include <map>
+
 #include <algorithm>
 #include <numeric>
 #include <utility>
@@ -20,6 +28,7 @@ using vll=vector<long long>;
 using vd=vector<double>;
 using vb=vector<bool>;
 using sti=stack<int>;
+using stch=stack<char>;
 using qi=queue<int>;
 using dqi=deque<int>;
 using dqll=deque<long long>;
@@ -37,14 +46,6 @@ using vvpii=vector<vector<pair<int, int>>>;
 
 // 0b(2), 0(8), 0x(16)
 // 0-based index vs 1-based index
-// vector = vec = v
-// stack = sta = st
-// queue = que = q
-// deque = dq
-// ans = answer
-// cur = current
-// coordinate = coord
-// adjacency matrix = adj_mat
 
 // const int INF=INT_MAX/4; // INF = INFinity
 

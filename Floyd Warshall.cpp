@@ -1,3 +1,5 @@
+// Reference: BOJ 11404
+
 #include <iostream>
 #include <string>
 #include <vector>
